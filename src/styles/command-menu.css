@@ -1,0 +1,86 @@
+.command-menu {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.command-trigger {
+  width: 100%;
+  padding: 12px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.command-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 640px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+}
+
+.command-input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-bottom: 1px solid #e2e8f0;
+  outline: none;
+}
+
+.command-list {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.command-item {
+  padding: 8px 12px;
+  margin: 2px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.command-item[data-selected="true"] {
+  background: #e2e8f0;
+}
+
+.command-item:hover {
+  background: #f7fafc;
+}
+
+.command-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.checkmark {
+  color: #48bb78;
+  font-weight: bold;
+}
+
+.back-button {
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.done-button {
+  margin-top: 8px;
+  background-color: #e2e8f0;
+  text-align: center;
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.done-button:hover {
+  background-color: #cbd5e0;
+}

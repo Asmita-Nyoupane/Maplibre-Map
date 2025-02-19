@@ -1,0 +1,320 @@
+{
+  "provinces": [
+    {
+      "name": "Koshi Province",
+      "coordinates": {
+        "longitude": 87.16,
+        "latitude": 27.13,
+        "zoom": 7.5
+      },
+      "districts": [
+        {
+          "name": "Morang",
+          "coordinates": {
+            "longitude": 87.2801,
+            "latitude": 26.6799,
+            "zoom": 10
+          },
+          "municipalities": [
+            {
+              "name": "Biratnagar",
+              "coordinates": {
+                "longitude": 87.2701,
+                "latitude": 26.4567,
+                "zoom": 12
+              }
+            },
+            {
+              "name": "Sundar Haraicha",
+              "coordinates": {
+                "longitude": 87.2833,
+                "latitude": 26.6667,
+                "zoom": 12
+              }
+            },
+            {
+              "name": "Belbari",
+              "coordinates": {
+                "longitude": 87.2801,
+                "latitude": 26.6799,
+                "zoom": 10
+              }
+            },
+            {
+              "name": "Pathari-Shanishchare",
+              "coordinates": {
+                "longitude": 87.2801,
+                "latitude": 26.6799,
+                "zoom": 10
+              }
+            }
+          ]
+        },
+        {
+          "name": "Jhapa",
+          "coordinates": {
+            "longitude": 87.8942,
+            "latitude": 26.5446,
+            "zoom": 10
+          },
+          "municipalities": [
+            {
+              "name": "Bhadrapur",
+              "coordinates": {
+                "longitude": 87.8942,
+                "latitude": 26.5446,
+                "zoom": 10
+              }
+            },
+            {
+              "name": "Damak",
+              "coordinates": {
+                "longitude": 87.7065,
+                "latitude": 26.6725,
+                "zoom": 12
+              }
+            },
+            {
+              "name": "Mechinagar",
+              "coordinates": {
+                "longitude": 87.8942,
+                "latitude": 26.5446,
+                "zoom": 10
+              }
+            },
+            {
+              "name": "Kankai",
+              "coordinates": {
+                "longitude": 87.8942,
+                "latitude": 26.5446,
+                "zoom": 10
+              }
+            }
+          ]
+        },
+        {
+          "name": "Sunsari",
+          "municipalities": ["Itahari", "Dharan", "Inaruwa", "Ramdhuni"]
+        },
+        {
+          "name": "Bhojpur",
+          "municipalities": ["Bhojpur", "Shadananda", "Arun", "Hatuwagadhi"]
+        }
+      ]
+    },
+    {
+      "name": "Madhesh Province",
+      "coordinates": {
+        "longitude": 85.95,
+        "latitude": 26.72,
+        "zoom": 7.5
+      },
+      "districts": [
+        {
+          "name": "Dhanusha",
+          "coordinates": {
+            "longitude": 85.9235,
+            "latitude": 26.835,
+            "zoom": 10
+          },
+          "municipalities": [
+            {
+              "name": "Janakpur",
+              "coordinates": {
+                "longitude": 85.9263,
+                "latitude": 26.7288,
+                "zoom": 12
+              }
+            },
+            {
+              "name": "Dhanushadham",
+              "coordinates": {
+                "longitude": 85.9235,
+                "latitude": 26.835,
+                "zoom": 10
+              }
+            },
+            {
+              "name": "Ganeshman Charnath",
+              "coordinates": {
+                "longitude": 85.9235,
+                "latitude": 26.835,
+                "zoom": 10
+              }
+            },
+            {
+              "name": "Mithila",
+              "coordinates": {
+                "longitude": 85.9235,
+                "latitude": 26.835,
+                "zoom": 10
+              }
+            }
+          ]
+        },
+        {
+          "name": "Parsa",
+          "municipalities": ["Birgunj", "Pokhariya", "Bahudarmai", "Parsagadhi"]
+        },
+        {
+          "name": "Sarlahi",
+          "municipalities": ["Malangwa", "Harion", "Bagmati", "Ishwarpur"]
+        },
+        {
+          "name": "Bara",
+          "municipalities": [
+            "Kalaiya",
+            "Jeetpur-Simara",
+            "Mahagadhimai",
+            "Pacharauta"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bagmati Province",
+      "districts": [
+        {
+          "name": "Kathmandu",
+          "municipalities": ["Kathmandu", "Kirtipur", "Tokha", "Chandragiri"]
+        },
+        {
+          "name": "Lalitpur",
+          "municipalities": ["Lalitpur", "Mahalaxmi", "Godawari", "Konjyosom"]
+        },
+        {
+          "name": "Bhaktapur",
+          "municipalities": [
+            "Bhaktapur",
+            "Madhyapur Thimi",
+            "Changunarayan",
+            "Suryabinayak"
+          ]
+        },
+        {
+          "name": "Makwanpur",
+          "municipalities": ["Hetauda", "Thaha", "Manahari", "Bhimphedi"]
+        }
+      ]
+    },
+    {
+      "name": "Gandaki Province",
+      "districts": [
+        {
+          "name": "Kaski",
+          "municipalities": ["Pokhara", "Annapurna", "Machhapuchhre", "Rupa"]
+        },
+        {
+          "name": "Tanahun",
+          "municipalities": ["Damauli", "Bhimad", "Shuklagandaki", "Vyas"]
+        },
+        {
+          "name": "Gorkha",
+          "municipalities": [
+            "Gorkha",
+            "Palungtar",
+            "Barpak Sulikot",
+            "Siranchok"
+          ]
+        },
+        {
+          "name": "Lamjung",
+          "municipalities": [
+            "Besisahar",
+            "Rainas",
+            "Sundarbazar",
+            "Dudhpokhari"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lumbini Province",
+      "districts": [
+        {
+          "name": "Rupandehi",
+          "municipalities": ["Butwal", "Siddharthanagar", "Devdaha", "Lumbini"]
+        },
+        {
+          "name": "Dang",
+          "municipalities": ["Ghorahi", "Tulsipur", "Lamahi", "Rajpur"]
+        },
+        {
+          "name": "Kapilvastu",
+          "municipalities": [
+            "Kapilvastu",
+            "Banganga",
+            "Buddhabhumi",
+            "Shivaraj"
+          ]
+        },
+        {
+          "name": "Nawalparasi West",
+          "municipalities": ["Bardaghat", "Sunwal", "Ramgram", "Sarawal"]
+        }
+      ]
+    },
+    {
+      "name": "Karnali Province",
+      "districts": [
+        {
+          "name": "Surkhet",
+          "municipalities": [
+            "Birendranagar",
+            "Gurbhakot",
+            "Lekbesi",
+            "Barahatal"
+          ]
+        },
+        {
+          "name": "Dailekh",
+          "municipalities": ["Dailekh", "Narayan", "Dullu", "Chamunda"]
+        },
+        {
+          "name": "Jumla",
+          "municipalities": [
+            "Chandannath",
+            "Tila",
+            "Guthichaur",
+            "Kanakasundari"
+          ]
+        },
+        {
+          "name": "Kalikot",
+          "municipalities": ["Kalikot", "Raskot", "Palata", "Pachaljharna"]
+        }
+      ]
+    },
+    {
+      "name": "Sudurpashchim Province",
+      "districts": [
+        {
+          "name": "Kailali",
+          "municipalities": ["Dhangadhi", "Tikapur", "Ghodaghodi", "Janaki"]
+        },
+        {
+          "name": "Kanchanpur",
+          "municipalities": [
+            "Mahendranagar",
+            "Bhimdatta",
+            "Bedkot",
+            "Shuklaphanta"
+          ]
+        },
+        {
+          "name": "Doti",
+          "municipalities": ["Dipayal", "Purbichauki", "Bogtan", "Sayal"]
+        },
+        {
+          "name": "Bajhang",
+          "municipalities": [
+            "Jaya Prithvi",
+            "Thalara",
+            "Bungal",
+            "Chabispathivera"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Koshi Province",
+        "incidents": 650,
+        "crimeRate": 65.0,
+        "id": "P1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [87.0, 26.8],
+            [87.8, 26.8],
+            [87.8, 27.8],
+            [87.0, 27.8],
+            [87.0, 26.8]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Madhesh Province",
+        "incidents": 720,
+        "crimeRate": 72.0,
+        "id": "P2"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [85.5, 26.5],
+            [86.5, 26.5],
+            [86.5, 27.2],
+            [85.5, 27.2],
+            [85.5, 26.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bagmati Province",
+        "incidents": 700,
+        "crimeRate": 70.0,
+        "id": "P3"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [85.0, 27.2],
+            [86.0, 27.2],
+            [86.0, 28.2],
+            [85.0, 28.2],
+            [85.0, 27.2]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gandaki Province",
+        "incidents": 550,
+        "crimeRate": 55.0,
+        "id": "P4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [83.5, 27.5],
+            [84.5, 27.5],
+            [84.5, 28.5],
+            [83.5, 28.5],
+            [83.5, 27.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lumbini Province",
+        "incidents": 610,
+        "crimeRate": 61.0,
+        "id": "P5"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [82.0, 27.2],
+            [83.0, 27.2],
+            [83.0, 28.2],
+            [82.0, 28.2],
+            [82.0, 27.2]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Karnali Province",
+        "incidents": 770,
+        "crimeRate": 77.0,
+        "id": "P6"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [81.0, 28.5],
+            [82.0, 28.5],
+            [82.0, 29.5],
+            [81.0, 29.5],
+            [81.0, 28.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sudurpashchim Province",
+        "incidents": 780,
+        "crimeRate": 78.0,
+        "id": "P7"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.0, 28.5],
+            [81.0, 28.5],
+            [81.0, 29.5],
+            [80.0, 29.5],
+            [80.0, 28.5]
+          ]
+        ]
+      }
+    }
+  ]
+}

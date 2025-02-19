@@ -1,0 +1,82 @@
+[
+  {
+    "city": "Kathmandu",
+    "population": "1,442,000",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Kathmandu_View.jpg/240px-Kathmandu_View.jpg",
+    "state": "Bagmati",
+    "latitude": 27.7172,
+    "longitude": 85.324
+  },
+  {
+    "city": "Pokhara",
+    "population": "518,452",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Pokhara_Lakeside.jpg/240px-Pokhara_Lakeside.jpg",
+    "state": "Gandaki",
+    "latitude": 28.2096,
+    "longitude": 83.9856
+  },
+  {
+    "city": "Lalitpur",
+    "population": "299,843",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Patan_Durbar_Square.jpg/240px-Patan_Durbar_Square.jpg",
+    "state": "Bagmati",
+    "latitude": 27.6667,
+    "longitude": 85.3333
+  },
+  {
+    "city": "Bharatpur",
+    "population": "369,377",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Bharatpur_City.jpg/240px-Bharatpur_City.jpg",
+    "state": "Bagmati",
+    "latitude": 27.6839,
+    "longitude": 84.417
+  },
+  {
+    "city": "Biratnagar",
+    "population": "244,750",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Biratnagar_City.jpg/240px-Biratnagar_City.jpg",
+    "state": "Koshi",
+    "latitude": 26.455,
+    "longitude": 87.2701
+  },
+  {
+    "city": "Birgunj",
+    "population": "280,000",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Birgunj_Market.jpg/240px-Birgunj_Market.jpg",
+    "state": "Madhesh",
+    "latitude": 27.0167,
+    "longitude": 84.8667
+  },
+  {
+    "city": "Dharan",
+    "population": "173,096",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Dharan_City.jpg/240px-Dharan_City.jpg",
+    "state": "Koshi",
+    "latitude": 26.8142,
+    "longitude": 87.279
+  },
+  {
+    "city": "Butwal",
+    "population": "195,054",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Butwal_City.jpg/240px-Butwal_City.jpg",
+    "state": "Lumbini",
+    "latitude": 27.7,
+    "longitude": 83.45
+  },
+  {
+    "city": "Hetauda",
+    "population": "153,875",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Hetauda_City.jpg/240px-Hetauda_City.jpg",
+    "state": "Bagmati",
+    "latitude": 27.4167,
+    "longitude": 85.0333
+  },
+  {
+    "city": "Janakpur",
+    "population": "169,287",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Janakpur_Dham.jpg/240px-Janakpur_Dham.jpg",
+    "state": "Madhesh",
+    "latitude": 26.7288,
+    "longitude": 85.9263
+  }
+]

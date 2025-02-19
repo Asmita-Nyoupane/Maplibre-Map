@@ -1,0 +1,138 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Koshi Province",
+        "incidents": 65
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [87.0, 26.8],
+            [87.8, 26.8],
+            [87.8, 27.8],
+            [87.0, 27.8],
+            [87.0, 26.8]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Madhesh Province",
+        "incidents": 72
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [85.5, 26.5],
+            [86.5, 26.5],
+            [86.5, 27.2],
+            [85.5, 27.2],
+            [85.5, 26.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bagmati Province",
+        "incidents": 70
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [85.0, 27.2],
+            [86.0, 27.2],
+            [86.0, 28.2],
+            [85.0, 28.2],
+            [85.0, 27.2]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gandaki Province",
+        "incidents": 55
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [83.5, 27.5],
+            [84.5, 27.5],
+            [84.5, 28.5],
+            [83.5, 28.5],
+            [83.5, 27.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lumbini Province",
+        "incidents": 61
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [82.0, 27.2],
+            [83.0, 27.2],
+            [83.0, 28.2],
+            [82.0, 28.2],
+            [82.0, 27.2]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Karnali Province",
+        "incidents": 77
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [81.0, 28.5],
+            [82.0, 28.5],
+            [82.0, 29.5],
+            [81.0, 29.5],
+            [81.0, 28.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sudurpashchim Province",
+        "incidents": 78
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.0, 28.5],
+            [81.0, 28.5],
+            [81.0, 29.5],
+            [80.0, 29.5],
+            [80.0, 28.5]
+          ]
+        ]
+      }
+    }
+  ]
+}

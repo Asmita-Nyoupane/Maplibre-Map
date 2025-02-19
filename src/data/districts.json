@@ -1,0 +1,181 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kathmandu",
+        "province": "Bagmati",
+        "incidents": 320,
+        "crimeRate": 82.5,
+        "id": "D01"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [85.2, 27.6],
+            [85.4, 27.6],
+            [85.4, 27.8],
+            [85.2, 27.8],
+            [85.2, 27.6]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lalitpur",
+        "province": "Bagmati",
+        "incidents": 180,
+        "crimeRate": 45.2,
+        "id": "D02"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [85.2, 27.5],
+            [85.4, 27.5],
+            [85.4, 27.6],
+            [85.2, 27.6],
+            [85.2, 27.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bhaktapur",
+        "province": "Bagmati",
+        "incidents": 150,
+        "crimeRate": 38.7,
+        "id": "D03"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [85.4, 27.6],
+            [85.6, 27.6],
+            [85.6, 27.7],
+            [85.4, 27.7],
+            [85.4, 27.6]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pokhara",
+        "province": "Gandaki",
+        "incidents": 230,
+        "crimeRate": 55.8,
+        "id": "D04"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [83.9, 28.1],
+            [84.1, 28.1],
+            [84.1, 28.3],
+            [83.9, 28.3],
+            [83.9, 28.1]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bharatpur",
+        "province": "Bagmati",
+        "incidents": 190,
+        "crimeRate": 48.3,
+        "id": "D05"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [84.3, 27.6],
+            [84.5, 27.6],
+            [84.5, 27.8],
+            [84.3, 27.8],
+            [84.3, 27.6]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Biratnagar",
+        "province": "Koshi",
+        "incidents": 280,
+        "crimeRate": 65.4,
+        "id": "D06"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [87.2, 26.4],
+            [87.4, 26.4],
+            [87.4, 26.6],
+            [87.2, 26.6],
+            [87.2, 26.4]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Birgunj",
+        "province": "Madhesh",
+        "incidents": 260,
+        "crimeRate": 72.1,
+        "id": "D07"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [84.8, 27.0],
+            [85.0, 27.0],
+            [85.0, 27.2],
+            [84.8, 27.2],
+            [84.8, 27.0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Butwal",
+        "province": "Lumbini",
+        "incidents": 210,
+        "crimeRate": 61.8,
+        "id": "D08"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [83.4, 27.6],
+            [83.6, 27.6],
+            [83.6, 27.8],
+            [83.4, 27.8],
+            [83.4, 27.6]
+          ]
+        ]
+      }
+    }
+  ]
+}
