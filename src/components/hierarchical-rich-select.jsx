@@ -3,9 +3,9 @@ import RichSelect from "./RichSelect";
 import nepalData from "../data/nepal.json";
 
 const HierarchicalRichSelect = ({ onSelectionChange }) => {
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState([]);
 
-  // Data trasformation
+  // Data transformation
   const hierarchicalData = nepalData.provinces.map((province) => ({
     label: province.name,
     value: province,
@@ -20,9 +20,15 @@ const HierarchicalRichSelect = ({ onSelectionChange }) => {
     })),
   }));
 
-  const handleSelect = (option) => {
-    setSelected(option);
-    onSelectionChange?.(option);
+  const handleSelect = (selections) => {
+    setSelected(selections);
+    onSelectionChange?.(selections);
+  };
+
+  // Only allow selecting municipalities
+  const isSelectable = (option) => {
+    // Check if this is a municipality (no sub-options)
+    return !option.options;
   };
 
   return (
@@ -31,9 +37,14 @@ const HierarchicalRichSelect = ({ onSelectionChange }) => {
         options={hierarchicalData}
         selected={selected}
         onSelect={handleSelect}
+        isSelectable={isSelectable}
         trigger={(selected) => (
           <button className="px-4 py-2 border border-gray-300 rounded-md hover:border-blue-500">
-            {selected ? selected.label : "Select Region"}
+            {selected.length === 0
+              ? "Select Municipalities"
+              : selected.length === 1
+              ? selected[0].label
+              : `${selected[0].label} +${selected.length - 1} more`}
           </button>
         )}
       />

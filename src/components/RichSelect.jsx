@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { Popover, PopoverTrigger, PopoverContent } from "../library/popover";
-
 import {
   CommandLibrary,
   CommandList,
@@ -10,40 +9,63 @@ import {
   CommandGroup,
   CommandInput,
 } from "../library/command";
-
 import { cn } from "../library/utilis/utilis";
 
-const RecursiveOptions = ({ options, onOptionSelect, className }) => {
+const RecursiveOptions = ({
+  options,
+  onOptionSelect,
+  selected = [],
+  className,
+  getOptionLabel,
+  getOptionValue,
+  getSubOptions,
+  isSelectable = () => false,
+}) => {
   return (
     <div className={cn(className)}>
       {options.map((option, index) => {
-        if (option.options) {
+        const subOptions = getSubOptions(option);
+        const isOptionSelectable = isSelectable(option);
+
+        if (subOptions?.length > 0) {
           return (
             <CommandGroup className="pl-4 mt-2" key={index}>
               <div className="cursor-default font-bold text-sm text-gray-800">
-                {option.label}
+                {getOptionLabel(option)}
               </div>
               <RecursiveOptions
-                options={option.options}
+                options={subOptions}
                 onOptionSelect={onOptionSelect}
+                selected={selected}
+                getOptionLabel={getOptionLabel}
+                getOptionValue={getOptionValue}
+                getSubOptions={getSubOptions}
+                isSelectable={isSelectable}
               />
             </CommandGroup>
           );
-        } else {
+        } else if (isOptionSelectable) {
+          const isSelected = selected.some(
+            (item) => getOptionValue(item) === getOptionValue(option)
+          );
+
           return (
             <CommandItem
               key={index}
               className={cn(
-                "px-4 cursor-pointer hover:bg-gray-100 font-light border-b border-gray-100"
+                "px-4 cursor-pointer font-light border-b border-gray-100",
+                isSelected ? "bg-blue-50" : "hover:bg-gray-100"
               )}
-              onSelect={() => {
-                onOptionSelect(option);
-              }}
+              onSelect={() => onOptionSelect(option)}
             >
-              {option.label}
+              <div className="flex justify-between items-center w-full">
+                <span>{getOptionLabel(option)}</span>
+                {isSelected && <span className="text-blue-600">✓</span>}
+              </div>
             </CommandItem>
           );
         }
+        return null;
       })}
     </div>
   );
@@ -51,38 +73,30 @@ const RecursiveOptions = ({ options, onOptionSelect, className }) => {
 
 const RichSelect = ({
   options,
-  selected,
+  selected = [],
   onSelect,
   trigger,
   children,
   className,
+  getOptionLabel = (option) => option.label || option.name,
+  getOptionValue = (option) => option.value || option,
+  getSubOptions = (option) => option.options || option.children,
+  isSelectable = (option) => !getSubOptions(option)?.length,
 }) => {
   const [openMain, setOpenMain] = useState(false);
 
-  // console.log('Selected:', selected);
-
   const handleOptionSelect = (option) => {
-    setOpenMain(false);
-    onSelect(option);
-    console.log("Option selected:", option);
-  };
-
-  const handleFlatOptions = (options) => {
-    return (
-      <CommandGroup>
-        {options.map((option, index) => (
-          <CommandItem
-            key={index}
-            className={cn(
-              "px-4 cursor-pointer hover:bg-gray-100 font-light border-b border-gray-100"
-            )}
-            onSelect={() => handleOptionSelect(option)}
-          >
-            {option.label}
-          </CommandItem>
-        ))}
-      </CommandGroup>
+    const isSelected = selected.some(
+      (item) => getOptionValue(item) === getOptionValue(option)
     );
+
+    const newSelected = isSelected
+      ? selected.filter(
+          (item) => getOptionValue(item) !== getOptionValue(option)
+        )
+      : [...selected, option];
+
+    onSelect(newSelected);
   };
 
   return (
@@ -108,14 +122,15 @@ const RichSelect = ({
               className="px-4 py-2 mb-2 border-b border-gray-300 sticky top-0 bg-white"
             />
             <CommandList>
-              {options.some((option) => option.options) ? (
-                <RecursiveOptions
-                  options={options}
-                  onOptionSelect={handleOptionSelect}
-                />
-              ) : (
-                handleFlatOptions(options)
-              )}
+              <RecursiveOptions
+                options={options}
+                onOptionSelect={handleOptionSelect}
+                selected={selected}
+                getOptionLabel={getOptionLabel}
+                getOptionValue={getOptionValue}
+                getSubOptions={getSubOptions}
+                isSelectable={isSelectable}
+              />
             </CommandList>
           </CommandLibrary>
         </PopoverContent>
