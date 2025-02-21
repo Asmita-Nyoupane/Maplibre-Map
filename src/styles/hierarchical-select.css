@@ -122,7 +122,7 @@
 }
 
 .command-input {
-  width: 100%;
+  width: calc(100% - 32px);
   padding: 12px 16px;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
@@ -130,6 +130,7 @@
   font-size: 14px;
   margin-bottom: 8px;
   background: #f7fafc;
+  box-sizing: border-box;
 }
 
 .command-input:focus {
@@ -211,4 +212,69 @@
 
 .command-list::-webkit-scrollbar-thumb:hover {
   background: #cbd5e0;
+}
+
+/* Driver.js custom styles */
+.driver-popover {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.driver-popover-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.driver-popover-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.driver-popover-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.driver-popover-btn {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.driver-popover-btn-primary {
+  background-color: #4299e1;
+  color: white;
+}
+
+.driver-popover-btn-secondary {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+/* Add these styles for selected items */
+.command-item[data-selected="true"] {
+  background-color: #ebf8ff; /* Light blue background */
+}
+
+.selected-item {
+  background-color: #e6fffa !important; /* Light teal background for selected municipalities */
+}
+
+/* Update the hover styles */
+.command-item:hover {
+  background-color: #f0f9ff; /* Lighter blue for hover */
+}
+
+/* Style for the selected trigger buttons */
+.select-trigger.selected {
+  background-color: #ebf8ff;
+  border-color: #4299e1;
+  color: #2b6cb0;
 }

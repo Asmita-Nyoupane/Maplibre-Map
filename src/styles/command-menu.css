@@ -33,6 +33,9 @@
   border: none;
   border-bottom: 1px solid #e2e8f0;
   outline: none;
+  overflow: hidden;
+  color: black;
+  margin: auto;
 }
 
 .command-list {

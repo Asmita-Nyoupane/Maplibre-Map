@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react";
 import Map, { NavigationControl } from "react-map-gl/maplibre";
 import "maplibre-gl/dist/maplibre-gl.css";
 import MultiRegionSelector from "./multi-region-selector";
+import { useDriverTour } from "../hooks/useDriverTour";
+import { tours } from "./driver-container";
 
 const NepalMap = () => {
   const mapRef = useRef(null);
@@ -10,6 +12,8 @@ const NepalMap = () => {
     latitude: 28.3949,
     zoom: 6.5,
   });
+
+  useDriverTour(tours.mapControls, "hasSeenMapTour");
 
   const flyToLocation = (location) => {
     console.log("Flying to location:", location);
@@ -37,8 +41,14 @@ const NepalMap = () => {
 
   return (
     <div style={{ position: "relative", width: "100vw", height: "100vh" }}>
-      <div style={{ position: "absolute", top: 20, left: 20, zIndex: 1 }}>
-        <MultiRegionSelector onRegionSelect={handleRegionSelect} />
+      <div
+        className="map-controls"
+        style={{ position: "absolute", top: 20, left: 20, zIndex: 1 }}
+      >
+        <MultiRegionSelector
+          onRegionSelect={handleRegionSelect}
+          className="region-selector"
+        />
       </div>
 
       <Map

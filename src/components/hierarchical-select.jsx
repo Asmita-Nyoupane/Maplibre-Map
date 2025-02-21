@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Command } from "cmdk";
 import nepalData from "../data/nepal.json";
+import { createDriver, tours } from "./driver-container";
 import "../styles/hierarchical-select.css";
+import { useDriverTour } from "../hooks/useDriverTour";
 
 const HierarchicalSelect = ({ onSelectionChange }) => {
   const [selectedProvince, setSelectedProvince] = useState(null);
@@ -12,6 +14,8 @@ const HierarchicalSelect = ({ onSelectionChange }) => {
   const [openDistrict, setOpenDistrict] = useState(false);
   const [openMunicipality, setOpenMunicipality] = useState(false);
   const [search, setSearch] = useState("");
+
+  useDriverTour(tours.regionSelector, "hasSeenRegionTour");
 
   const handleProvinceSelect = (province) => {
     setSelectedProvince(province);
@@ -68,7 +72,8 @@ const HierarchicalSelect = ({ onSelectionChange }) => {
       <div className="select-box">
         {/* <label>Province :</label> */}
         <button
-          className="select-trigger"
+          id="province-select"
+          className={`select-trigger ${selectedProvince ? "selected" : ""}`}
           onClick={() => setOpenProvince(true)}
         >
           {selectedProvince?.name || "Select Province"}
@@ -96,6 +101,7 @@ const HierarchicalSelect = ({ onSelectionChange }) => {
                   key={province.name}
                   onSelect={() => handleProvinceSelect(province)}
                   className="command-item"
+                  data-selected={selectedProvince?.name === province.name}
                 >
                   {province.name}
                 </Command.Item>
@@ -107,7 +113,8 @@ const HierarchicalSelect = ({ onSelectionChange }) => {
       {/* District Selector */}
       <div className="select-box">
         <button
-          className="select-trigger"
+          id="district-select"
+          className={`select-trigger ${selectedDistrict ? "selected" : ""}`}
           onClick={() => setOpenDistrict(true)}
           disabled={!selectedProvince}
         >
@@ -136,6 +143,7 @@ const HierarchicalSelect = ({ onSelectionChange }) => {
                   key={district.name}
                   onSelect={() => handleDistrictSelect(district)}
                   className="command-item"
+                  data-selected={selectedDistrict?.name === district.name}
                 >
                   {district.name}
                 </Command.Item>
@@ -148,7 +156,10 @@ const HierarchicalSelect = ({ onSelectionChange }) => {
       <div className="select-box">
         {/* <label>Palika :</label> */}
         <button
-          className="select-trigger"
+          id="palika-select"
+          className={`select-trigger ${
+            selectedMunicipalities.length > 0 ? "selected" : ""
+          }`}
           onClick={() => setOpenMunicipality(true)}
           disabled={!selectedDistrict}
         >
@@ -176,11 +187,17 @@ const HierarchicalSelect = ({ onSelectionChange }) => {
                   <Command.Item
                     key={mun.name}
                     onSelect={() => handleMunicipalitySelect(mun)}
-                    className="command-item selected-item"
+                    className={`command-item ${
+                      selectedMunicipalities.some((m) => m.name === mun.name)
+                        ? "selected-item"
+                        : ""
+                    }`}
                   >
                     <div className="command-item-content">
                       <span>{mun.name}</span>
-                      <span className="checkmark">✓</span>
+                      {selectedMunicipalities.some(
+                        (m) => m.name === mun.name
+                      ) && <span className="checkmark">✓</span>}
                     </div>
                   </Command.Item>
                 ))}
@@ -216,7 +233,11 @@ const HierarchicalSelect = ({ onSelectionChange }) => {
                     <Command.Item
                       key={index}
                       onSelect={() => handleMunicipalitySelect(mun)}
-                      className="command-item"
+                      className={`command-item ${
+                        selectedMunicipalities.some((m) => m.name === mun.name)
+                          ? "selected-item"
+                          : ""
+                      }`}
                     >
                       <div className="command-item-content">
                         <span>{mun.name}</span>
