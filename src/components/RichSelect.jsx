@@ -16,37 +16,31 @@ const RecursiveOptions = ({
   onOptionSelect,
   selected = [],
   className,
-  getOptionLabel,
-  getOptionValue,
-  getSubOptions,
   isSelectable = () => false,
 }) => {
   return (
     <div className={cn(className)}>
       {options.map((option, index) => {
-        const subOptions = getSubOptions(option);
+        const subOptions = option.options;
         const isOptionSelectable = isSelectable(option);
 
         if (subOptions?.length > 0) {
           return (
             <CommandGroup className="pl-4 mt-2" key={index}>
               <div className="cursor-default font-bold text-sm text-gray-800">
-                {getOptionLabel(option)}
+                {option.label}
               </div>
               <RecursiveOptions
                 options={subOptions}
                 onOptionSelect={onOptionSelect}
                 selected={selected}
-                getOptionLabel={getOptionLabel}
-                getOptionValue={getOptionValue}
-                getSubOptions={getSubOptions}
                 isSelectable={isSelectable}
               />
             </CommandGroup>
           );
         } else if (isOptionSelectable) {
           const isSelected = selected.some(
-            (item) => getOptionValue(item) === getOptionValue(option)
+            (item) => item.value === option.value
           );
 
           return (
@@ -59,7 +53,7 @@ const RecursiveOptions = ({
               onSelect={() => onOptionSelect(option)}
             >
               <div className="flex justify-between items-center w-full">
-                <span>{getOptionLabel(option)}</span>
+                <span>{option.label}</span>
                 {isSelected && <span className="text-blue-600">✓</span>}
               </div>
             </CommandItem>
@@ -78,22 +72,14 @@ const RichSelect = ({
   trigger,
   children,
   className,
-  getOptionLabel = (option) => option.label || option.name,
-  getOptionValue = (option) => option.value || option,
-  getSubOptions = (option) => option.options || option.children,
-  isSelectable = (option) => !getSubOptions(option)?.length,
 }) => {
   const [openMain, setOpenMain] = useState(false);
 
   const handleOptionSelect = (option) => {
-    const isSelected = selected.some(
-      (item) => getOptionValue(item) === getOptionValue(option)
-    );
+    const isSelected = selected.some((item) => item.value === option.value);
 
     const newSelected = isSelected
-      ? selected.filter(
-          (item) => getOptionValue(item) !== getOptionValue(option)
-        )
+      ? selected.filter((item) => item.value !== option.value)
       : [...selected, option];
 
     onSelect(newSelected);
@@ -126,10 +112,7 @@ const RichSelect = ({
                 options={options}
                 onOptionSelect={handleOptionSelect}
                 selected={selected}
-                getOptionLabel={getOptionLabel}
-                getOptionValue={getOptionValue}
-                getSubOptions={getSubOptions}
-                isSelectable={isSelectable}
+                isSelectable={(option) => !option.options?.length}
               />
             </CommandList>
           </CommandLibrary>
